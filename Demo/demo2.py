@@ -250,7 +250,7 @@ class Example(wx.Frame):
 
     def show_result(self):
         result_list = []
-        result_list.append("h3.测试信息：\n")
+        result_list.append("【测试信息】\n")
         self.add_info(result_list, "测试App :{}", const.KEY_NAME)
         self.add_info(result_list, " ({})", const.KEY_VERSION)
         self.add_info(result_list, "\n地区 :{}", const.KEY_AREA)
@@ -263,15 +263,15 @@ class Example(wx.Frame):
         self.add_info(result_list, "\nUIID :{}", const.KEY_UIID)
         self.add_info(result_list, "\n固件key :{}", const.KEY_FIRMWARE_KEY)
         self.add_info(result_list, "\n固件版本 :{}", const.KEY_FIRMWARE_VERSION)
-        self.add_info(result_list, "\n\nh3.前提条件：\n{}", const.KEY_PRECONDITION)
-        self.add_info(result_list, "\n\nh3.测试步骤：\n # {}", const.KEY_ACTION1)
-        self.add_info(result_list, "\n # {}", const.KEY_ACTION2)
-        self.add_info(result_list, "\n # {}", const.KEY_ACTION3)
-        self.add_info(result_list, "\n # {}", const.KEY_ACTION4)
-        self.add_info(result_list, "\n # {}", const.KEY_ACTION5)
-        self.add_info(result_list, "\n\nh3.实际结果：\n{}", const.KEY_ACTUAL_RESULT)
-        self.add_info(result_list, "\n\nh3.期望结果：\n{}", const.KEY_EXPECT_RESULT)
-        self.add_info(result_list, "\n\nh3.备注：\n {}", const.KEY_REMARK)
+        self.add_info(result_list, "\n\n【前提条件】\n{}", const.KEY_PRECONDITION)
+        self.add_info(result_list, "\n\n*测试步骤：*\n # （1）:{}", const.KEY_ACTION1)
+        self.add_info(result_list, "\n # （2）:{}", const.KEY_ACTION2)
+        self.add_info(result_list, "\n # （3）:{}", const.KEY_ACTION3)
+        self.add_info(result_list, "\n # （4）:{}", const.KEY_ACTION4)
+        self.add_info(result_list, "\n # （5）:{}", const.KEY_ACTION5)
+        self.add_info(result_list, "\n\n【实际结果】\n{}", const.KEY_ACTUAL_RESULT)
+        self.add_info(result_list, "\n\n【期望结果】\n{}", const.KEY_EXPECT_RESULT)
+        self.add_info(result_list, "\n\n【备注】\n{}", const.KEY_REMARK)
         self.dic[const.KEY_RESULT].SetValue(''.join(result_list))
 
     def add_info(self, array, format_str, key):
